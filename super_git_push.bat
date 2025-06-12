@@ -1,13 +1,7 @@
 @echo off
-echo ==============================================
-echo   SCRIPT SUPER GIT PUSH INICIADO
-echo ==============================================
-
-set /p mensaje=Ingresa el mensaje de commit:
-
-git status
+cd /d "%~dp0"
+set /p commit_msg=Ingresa el mensaje de commit: 
 git add .
-git commit -m "%mensaje%"
+git commit -m "%commit_msg%"
 git push origin main
-
 pause
